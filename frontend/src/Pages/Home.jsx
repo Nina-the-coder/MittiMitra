@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import tree from "../assets/tree.webP";
-import mitmit from "../assets/mitmit.webP";
+import tree from "../assets/tree.webp";
+import mitmit from "../assets/mitmit.webp";
 import VariantButton from "../Components/VariantButton";
 
 const Home = () => {

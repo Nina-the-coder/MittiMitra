@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import VariantButton from "./VariantButton";
-import Logo from "../assets/Logo.webP"
+import Logo from "../assets/Logo.webp"
 
 const Navbar = () => {
   return (
