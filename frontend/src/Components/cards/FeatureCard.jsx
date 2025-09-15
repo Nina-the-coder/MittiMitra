@@ -23,10 +23,10 @@ const FeatureCard = () => {
     },
   ];
   return (
-    <div className="flex gap-16 w-fit">
+    <div className="flex gap-16 w-full flex-wrap lg:flex-nowrap lg:w-fit">
       {items.map((item, index) => (
         <div key={index} className="w-[348px] h-[420px] rounded-2xl bg-white">
-          <div className="h-[200px] mt-4 flex justify-center items-center p-0">
+          <div className="h-[200px] mt-4 flex justify-center items-center">
             <img className="h-full object-cover" src={item.image} alt={item.title} />
           </div>
           <div className = "p-8">
