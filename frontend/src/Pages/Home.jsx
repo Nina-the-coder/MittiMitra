@@ -94,6 +94,7 @@ const Home = () => {
 
       {/* how it works */}
       <div className="relative lg:bottom-[300px] bottom-[1450px] flex flex-col justify-center items-center">
+
         <div className="text-[36px] font-bold ">How it Works</div>
         <div className="flex mt-10 items-center justify-center w-full">
           {/* step 1 */}
