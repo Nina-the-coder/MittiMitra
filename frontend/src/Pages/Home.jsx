@@ -114,6 +114,7 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center w-full mb-100">
         <div className="my-10 text-[36px] font-bold ">How it Works</div>
         <div className="items-center justify-center w-full hidden md:flex">
+
           {/* step 1 */}
           <div className="w-1/4">
             <div className="flex items-center">

@@ -24,6 +24,7 @@ const FeatureCard = () => {
   ];
   return (
     <div className="flex gap-8 lg:gap-16 w-full flex-wrap lg:flex-nowrap lg:w-fit items-center justify-center">
+
       {items.map((item, index) => (
         <div key={index} className="flex flex-col justify-evenly w-[300px] lg:w-[348px] h-[360px] lg:h-[420px] rounded-2xl bg-white">
           <div className="h-[150px] lg:h-[200px] mt-4 flex justify-center items-center p-0">
