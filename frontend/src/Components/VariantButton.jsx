@@ -9,8 +9,8 @@ const VariantButton = ({ onClick, variant, size, text, icon = "", className }) =
     tiny: "h-[28px] w-[28px]",
     small: "h-[28px] w-[90px]",
     medium: "h-[28px] w-[100px]",
-    large: "h-[40px] w-[150px] text-[22px]",
-    "extra-large": "w-[300px] sm:w-[400px] h-[100px] text-[30px] sm:text-[36px]",
+    large: "h-[35px] lg:h-[40px] w-[150px] text-[22px]",
+    "extra-large": "w-[250px] lg:w-[400px] h-[70px] lg:h-[100px] text-[24px] lg:text-[36px]",
   };
 
   const variantClasses = {
@@ -30,7 +30,7 @@ const VariantButton = ({ onClick, variant, size, text, icon = "", className }) =
   return (
     <button type="button" className={classes} onClick={onClick}>
       <span className="">{text}</span>
-      {icon != "" ? <Icon name={icon} className={`${size != "extra-large" ? "h-[20px] w-[20px]" : "h-[50px] w-[50px]"} ml-0.5`} /> : ""}
+      {icon && <Icon name={icon} className={`${size != "extra-large" ? "h-[20px] w-[20px]" : "h-[50px] w-[50px]"} ml-0.5`} /> }
     </button>
   );
 };

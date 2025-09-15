@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-[68px] w-full px-2 flex justify-between bg-card-bg items-center">
+    <div className="h-[50px] lg:h-[68px] w-full px-2 flex justify-between bg-card-bg items-center">
       <div className="flex items-center gap-2">
         <button
           className="hover:cursor-pointer hover:bg-gray-400 p-2 rounded-xl block lg:hidden"
@@ -20,13 +20,13 @@ const Navbar = () => {
         >
           <Icon name="menu" />
         </button>
-        <div className="h-[68px] w-[68px] flex justify-center items-center lg:ml-4">
+        <div className="h-auto w-[50px] flex justify-center items-center lg:ml-4">
           <img src={Logo} alt="MitMit" />
         </div>
       </div>
       <div className="flex items-center gap-8 px-8">
         <div className="hidden lg:block">
-          <ul className="flex space-x-4 text-[18px] font-semibold items-center gap-4">
+          <ul className="flex space-x-4 text-[20px] font-semibold items-center gap-4">
             <li>
               <Link to="/" className="hover:underline">
                 Home

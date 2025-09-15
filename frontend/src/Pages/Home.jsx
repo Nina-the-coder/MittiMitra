@@ -24,10 +24,10 @@ const Home = () => {
       <Navbar />
 
       {/* CTA Section */}
-      <div className="flex flex-col-reverse md:flex-row h-fit lg:h-[600px] w-full items-center mt-8">
+      <div className="flex flex-col-reverse md:flex-row md:justify-evenly md:my-10 h-fit w-full items-center lg:mt-8">
         {/* Tree Background Image */}
-        <div className="h-0 w-0 lg:h-[600px] lg:w-[600px] relative right-[250px]">
-          <img src={tree} alt="" />
+        <div className="h-0 w-0 xl:h-[500px] xl:w-[500px] relative right-[250px]">
+          <img src={tree} alt="tree illustration" />
         </div>
 
         {/* Text Content with Animation */}
@@ -35,24 +35,24 @@ const Home = () => {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col h-fit w-[450px] sm:w-auto border rounded-2xl py-16 px-8 lg:p-16 justify-center mr-8"
+          className="flex flex-col h-fit w-[320px] sm:w-auto border rounded-2xl p-8 sm:p-10 lg:p-16 justify-center lg:m-10"
         >
           <div
-            className={`text-[52px] sm:text-[64px] font-bold typewriter-text ${
+            className={`text-[32px] sm:text-[48px] lg:text-[64px] font-bold typewriter-text ${
               finishedFirst ? "finished" : ""
             }`}
           >
             Namaste!
           </div>
           <div
-            className={`text-[32px] sm:text-[36px] font-semibold typewriter-text ${
+            className={`text-[24px] sm:text-[30px] lg:text-[36px] font-semibold typewriter-text ${
               finishedSecond ? "finished" : ""
             }`}
             style={{ animationDelay: "3s" }}
           >
             I am <span className="text-green tracking-wider">MittiMitra</span>
           </div>
-          <div className="text-[32px] sm:text-[36px] font-semmibold mb-8">
+          <div className="text-[24px] sm:text-[30px] lg:text-[36px] font-semmibold mb-4 lg:mb-8">
             Your AI Farming Buddy
           </div>
           <div>
@@ -70,33 +70,50 @@ const Home = () => {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="lg:h-[400px] lg:w-[400px] h-[300px] w-[300px] my-10"
+          className=" h-[180px] sm:h-[300px] lg:h-[400px] w-auto lg:mx-16 lg:mr-24 my-10 flex items-center justify-center"
         >
-          <img
-            src={mitmit}
-            alt="MittiMitra"
-            className="lg:h-[400px] lg:w-[400px] h-[300px] w-[300px]"
-          />
+          <img src={mitmit} alt="MittiMitra" className="h-full w-full" />
         </motion.div>
       </div>
 
       {/* Features */}
-      <div className="overflow-hidden">
-        <div className="w-[2000px] lg:h-[900px] h-[1800px] bg-green relative lg:right-[100px] right-[500px] top-[50px] lg:top-[150px] -rotate-5"></div>
-        <div className="relative lg:bottom-[700px] bottom-[1700px] lg:h-[700px] h-fit flex flex-col items-center p-8 pl-20 w-full">
-          <div className="mt-10 text-[36px] font-bold">Why MittiMitra ?</div>
-          <div className="text-[32px] font-medium mb-16">
+      <div className="w-full mt-10 lg:mt-20 overflow-clip">
+        {/* upper triangle */}
+        <div
+          class="w-0 h-0 
+            border-l-[100vw] border-l-transparent
+            border-r-0 border-r-transparent
+            border-b-[5rem] 
+            lg:border-b-[10rem] 
+            border-green"
+        ></div>
+
+        {/* Your content */}
+        <div className="flex flex-col py-16 lg:py-20 items-center bg-green">
+          <h2 className="text-[28px] lg:text-[36px] font-bold text-center">
+            Why MittiMitra?
+          </h2>
+          <p className="text-[24px] lg:text-[32px] font-medium mb-16 text-center">
             Helping farmers make smarter choices everyday.
-          </div>
+          </p>
           <FeatureCard />
         </div>
+
+        {/* lower triangle */}
+        <div
+          class="w-0 h-0 
+            border-r-[100vw] border-l-transparent
+            border-l-0 border-r-transparent
+            border-t-[5rem] 
+            lg:border-t-[10rem] 
+            border-green"
+        ></div>
       </div>
 
       {/* how it works */}
-      <div className="relative lg:bottom-[300px] bottom-[1450px] flex flex-col justify-center items-center">
-
-        <div className="text-[36px] font-bold ">How it Works</div>
-        <div className="flex mt-10 items-center justify-center w-full">
+      <div className="flex flex-col justify-center items-center w-full mb-100">
+        <div className="my-10 text-[36px] font-bold ">How it Works</div>
+        <div className="items-center justify-center w-full hidden md:flex">
           {/* step 1 */}
           <div className="w-1/4">
             <div className="flex items-center">
@@ -105,7 +122,9 @@ const Home = () => {
               </div>
               <div className="border-2 w-[90%] h-0 border-green"></div>
             </div>
-            <div className="text-[24px]">Enter Your Soil and Location</div>
+            <div className="text-[24px] min-h-[100px] pr-8 mt-4">
+              Enter Your Soil and Location
+            </div>
           </div>
 
           {/* step 2 */}
@@ -116,7 +135,9 @@ const Home = () => {
               </div>
               <div className="border-2 w-[90%] h-0 border-green"></div>
             </div>
-            <div className="text-[24px]">Get Crop Suggestions</div>
+            <div className="text-[24px] min-h-[100px]  pr-8 mt-4">
+              Get Crop Suggestions
+            </div>
           </div>
 
           {/* step 3 */}
@@ -127,10 +148,49 @@ const Home = () => {
               </div>
               <div className="border-2 w-[90%] h-0 border-green"></div>
             </div>
-            <div className="text-[24px]">Maximize Profit</div>
+            <div className="text-[24px] min-h-[100px]  pr-8 mt-4">
+              Maximize Profit
+            </div>
+          </div>
+        </div>
+
+        {/* for smaller screens */}
+        <div className="mx-8 md:hidden">
+          <div className="flex">
+            <div className="flex flex-col items-center">
+              <div className="h-[50px] w-[50px] bg-gray-300 rounded-full border text-[32px] flex justify-center items-center ">
+                1
+              </div>
+              <div className="border-2 w-0 h-[100px] border-green"></div>
+            </div>
+            <div className="text-[20px] min-h-[100px] mt-2 ml-4">
+              Enter Your Soil and Location
+            </div>
+          </div>
+          <div className="flex">
+            <div className="flex flex-col items-center">
+              <div className="h-[50px] w-[50px] bg-gray-300 rounded-full border text-[32px] flex justify-center items-center ">
+                2
+              </div>
+              <div className="border-2 w-0 h-[100px] border-green"></div>
+            </div>
+            <div className="text-[20px] min-h-[100px]  mt-2 ml-4">
+              Get Crop Suggestions
+            </div>
+          </div>
+          <div className="flex">
+            <div className="flex flex-col items-center">
+              <div className="h-[50px] w-[50px] bg-gray-300 rounded-full border text-[32px] flex justify-center items-center ">
+                3
+              </div>
+            </div>
+            <div className="text-[20px] min-h-[100px] mt-2 ml-4">
+              Maximize Profit
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
