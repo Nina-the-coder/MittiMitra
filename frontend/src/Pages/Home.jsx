@@ -70,9 +70,13 @@ const Home = () => {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className=" h-[180px] sm:h-[300px] lg:h-[400px] w-auto lg:mx-16 lg:mr-24 my-10 flex items-center justify-center"
+          className=" h-[180px] sm:h-[300px] lg:h-[400px] lg:mx-16 lg:mr-24 my-10 flex items-center justify-center"
         >
-          <img src={mitmit} alt="MittiMitra" className="h-full w-full" />
+          <img
+            src={mitmit}
+            alt="MittiMitra"
+            className="h-full w-full object-contain"
+          />
         </motion.div>
       </div>
 
@@ -114,7 +118,6 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center w-full mb-100">
         <div className="my-10 text-[36px] font-bold ">How it Works</div>
         <div className="items-center justify-center w-full hidden md:flex">
-
           {/* step 1 */}
           <div className="w-1/4">
             <div className="flex items-center">
@@ -191,7 +194,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
